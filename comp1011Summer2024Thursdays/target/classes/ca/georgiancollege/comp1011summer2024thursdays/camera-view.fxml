@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane stylesheets="@app.css" dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1011summer2024thursdays.CameraController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Label layoutX="56.0" layoutY="28.0" text="Camera Time">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="error" layoutX="7.0" layoutY="88.0" prefHeight="22.0" prefWidth="287.0" text="Hey! Follow the instructions man!" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="307.0" text="Name" />
+            <TextField fx:id="name" layoutX="91.0" layoutY="303.0" />
+            <Label layoutX="26.0" layoutY="340.0" text="Make" />
+            <TextField fx:id="make" layoutX="90.0" layoutY="336.0" />
+            <Label layoutX="27.0" layoutY="378.0" text="Model" />
+            <TextField fx:id="model" layoutX="91.0" layoutY="374.0" />
+            <Label layoutX="27.0" layoutY="420.0" text="Color" />
+            <TextField fx:id="color" layoutX="91.0" layoutY="416.0" />
+            <Button layoutX="124.0" layoutY="515.0" mnemonicParsing="false" onAction="#onSubmit" text="Submit" />
+            <ImageView fx:id="photo" fitHeight="122.0" fitWidth="185.0" layoutX="85.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/camera3.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="172.0" text="Photo" />
+            <Button layoutX="124.0" layoutY="255.0" mnemonicParsing="false" onAction="#onArrowClick" text="&lt;" />
+            <Button layoutX="218.0" layoutY="255.0" mnemonicParsing="false" onAction="#onArrowClick" text="&gt;" />
+            <Slider fx:id="numPhotos" layoutX="90.0" layoutY="471.0" showTickLabels="true" showTickMarks="true" />
+            <Label layoutX="17.0" layoutY="469.0" text="# Photos" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Label layoutX="28.0" layoutY="52.0" text="Output">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="output" alignment="TOP_LEFT" layoutX="28.0" layoutY="289.0" prefHeight="158.0" prefWidth="239.0" style="-fx-border-color: black;" text="Output" wrapText="true">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Label layoutX="55.0" layoutY="515.0" text="Choose a Camera object to Display" />
+            <ComboBox fx:id="comboBox" layoutX="73.0" layoutY="551.0" onAction="#onChange" prefWidth="150.0" />
+            <ImageView fx:id="photoRight" fitHeight="150.0" fitWidth="200.0" layoutX="55.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/camera0.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnDelete" layoutX="190.0" layoutY="455.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button" />
+            <Button fx:id="btnEdit" layoutX="55.0" layoutY="455.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"  text="Button" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

@@ -1,0 +1,9 @@
+#btnEdit{
+    -fx-background-color: lightblue;
+    -fx-text-fill: orange;
+}
+
+#btnEdit:hover{
+
+    -fx-background-color: darkblue;
+}

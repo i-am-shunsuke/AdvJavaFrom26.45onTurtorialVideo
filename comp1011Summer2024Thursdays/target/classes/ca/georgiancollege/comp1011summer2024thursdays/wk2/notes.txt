@@ -1,0 +1,77 @@
+legend		p=public, v=private, d=default, r=protected
+
+d: powerState: enum
+p: color: string
+v: storage: int
+v: make: string
+v: model:string
+v:shutter: enum
+v:battery: double
+v: numberOfPhotos: int
+v: hoursOfViewRecorded: double
+
+p:takePhoto(mode: string, int howMany): boolean
+p: savePhoto(photoId: int): boolean
+p:recordVideo(howLong: double): boolean
+
+shutterMovement
+focus
+autofocus
+takePhoto
+savePhoto
+viewPhoto
+recordVideo
+viewVideo
+
+
+
+
+
+
+
+
+When creating a new scene (screen)
+Change the Application loader file to load the new .fxml file
+Create the controller file for the new .fxml file in java directory
+Create the .fxml file in the resources directory
+launch the app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________________________________________________________________
+
+SplitPane as a root layout
+
+	BIG TITLE: label			Label: rectangle
+	hidden error label			display the result of the 									recently added Camera
+	Name: textfield
+	Make: textfield			|
+	Model: textfield		|
+	color: textfield		|
+	submit button: button		|
+					|
+					|
+					|
+					|
+					|
+					|
+					|
+					|
+					|
+					|
+___________________________________________________________________________

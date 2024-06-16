@@ -1,0 +1,14 @@
+When user submits form
+	Application takes all values of the textfields
+	evaluated each value and ensures that none are empty
+		if any values are empty
+			set an error message to GUI
+		else
+			display the values of the Camera object to the output label
+			by calling the toString method of camera
+
+Prof's recommondation: send all values to Camera constructor
+Camera construct calls setters method to evaluate/validate values
+constructor invokes exception if values are empty
+
+Controller set the error message if it encouters an exception while instantiating Camera object
